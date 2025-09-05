@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chubby Cattle • Allergen Guide Access</title>
+<meta name="theme-color" content="#F15A24">
+<!--
+  Chubby Cattle Allergen Splash Page
+  =====================================================
+  HOW TO USE:
+  1) Replace the two placeholders below with your live Google Drive links:
+     - GUEST_PDF_URL  : public, view-only PDF of the allergen booklet
+     - STAFF_XLSX_URL : staff Excel link (view-only for staff; managers get edit)
+  2) Commit this file to your GitHub repo: chubbycattle-allergens
+  3) Your live page: https://kriskao-star.github.io/chubbycattle-allergens/
+-->
+<style>
+  :root{
+    --brand:#F15A24; --black:#000000; --white:#ffffff; --text:#111111;
+    --safe:#2bbf6a; --warn:#f6c445; --high:#F15A24;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--white);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.45}
+  .wrap{max-width:720px;margin:0 auto;padding:24px 20px 40px}
+  header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+  header img.logo{width:64px;height:64px;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.12);object-fit:cover}
+  h1{font-size:1.55rem;margin:0 0 4px;font-weight:900;letter-spacing:.2px}
+  .tag{display:inline-block;background:var(--brand);color:white;font-weight:700;border-radius:999px;padding:4px 10px;font-size:.77rem;letter-spacing:.25px}
+  .card{position:relative;background:#fff;border:2px solid #111;box-shadow:8px 10px 0 #111;border-radius:18px;padding:22px;margin-top:18px}
+  .burst{position:absolute;inset:-6px;pointer-events:none;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(241,90,36,.16), transparent 60%),
+      radial-gradient(circle at 80% 20%, rgba(241,90,36,.12), transparent 55%),
+      radial-gradient(circle at 50% 90%, rgba(241,90,36,.10), transparent 55%);
+    mask: linear-gradient(#000,transparent 90%); border-radius:20px}
+  .buttons{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px}
+  @media(min-width:560px){.buttons{grid-template-columns:1fr 1fr}}
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;
+    padding:16px 18px;border-radius:14px;border:3px solid #111;text-decoration:none;font-weight:900;
+    box-shadow:6px 8px 0 #111;transition:transform .05s ease, box-shadow .05s ease;
+    font-size:1.05rem}
+  .btn:active{transform:translate(2px,2px);box-shadow:4px 6px 0 #111}
+  .btn-guest{background:var(--brand);color:#fff}
+  .btn-staff{background:#000;color:#fff}
+  .legend{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 8px}
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;border:2px solid #111;background:#fff;font-weight:800}
+  .dot{width:14px;height:14px;border-radius:50%;border:2px solid #111}
+  .dot.safe{background:var(--safe)} .dot.warn{background:var(--warn)} .dot.high{background:var(--high)}
+  footer{margin-top:22px;font-size:.9rem;color:#333}
+  .disclaimer{background:#fff7f2;border-left:6px solid var(--brand);padding:10px 12px;border-radius:8px}
+  .icons{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+  .icon{border:2px solid #111;border-radius:10px;padding:6px 10px;font-weight:800;background:#fff}
+  .small{font-size:.88rem}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <!-- Optional: put your logo file as logo.png in the repo root -->
+      <img class="logo" src="logo.png" alt="Chubby Cattle Logo" onerror="this.style.display='none'">
+      <div>
+        <h1>Chubby Cattle • Allergen Access</h1>
+        <span class="tag">Comic-style • Branded • Mobile-Ready</span>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="burst"></div>
+      <div class="icons">
+        <div class="icon">🌾 Gluten</div><div class="icon">🥛 Dairy</div><div class="icon">🥜 Peanuts</div>
+        <div class="icon">🌰 Tree Nuts</div><div class="icon">🦐 Shellfish</div><div class="icon">🐟 Fish</div>
+        <div class="icon">🥚 Eggs</div><div class="icon">🌱 Soy</div><div class="icon">⚪ Sesame</div>
+      </div>
+
+      <div class="buttons">
+        <!-- TODO: paste your public guest PDF link -->
+        <a class="btn btn-guest" href="GUEST_PDF_URL" target="_blank" rel="noopener">🌐 Guest Access (PDF)</a>
+        <!-- TODO: paste your staff Excel link -->
+        <a class="btn btn-staff" href="STAFF_XLSX_URL" target="_blank" rel="noopener">🔒 Staff Access (Excel)</a>
+      </div>
+
+      <div class="legend small">
+        <span class="pill"><span class="dot high"></span> High cross-contact</span>
+        <span class="pill"><span class="dot warn"></span> Moderate</span>
+        <span class="pill"><span class="dot safe"></span> Low</span>
+      </div>
+
+      <footer>
+        <div class="disclaimer">
+          <strong>Allergen Safety:</strong> While we make every effort to avoid cross-contact, we cannot guarantee the complete absence of allergens. Please inform your server of any allergies.
+        </div>
+      </footer>
+    </section>
+
+    <p class="small" style="opacity:.8;margin-top:14px">Powered by Chubby Cattle • Branded QR routes guests/staff to the right place.</p>
+  </div>
+</body>
+</html>
